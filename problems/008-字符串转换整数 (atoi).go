@@ -53,7 +53,7 @@ import (
      因此返回 INT_MIN (−231) 。
 */
 func main() {
-	fmt.Print(myAtoi("words and 987"))
+	fmt.Println(myAtoi("words and 987"))
 }
 
 // 执行用时 4 ms 内存消耗 2.3 MB
@@ -63,24 +63,20 @@ func myAtoi(str string) int {
 	number := 0
 	lastIsValid := false
 	for _, c := range bytes {
-		// 空格
-		if c == 32 || c == 43 || c == 45 {
+		if c == ' ' || c == '+' || c == '-' {
 			if lastIsValid {
 				break
 			}
-			// +号
-			if c == 43 {
+			if c == '+' {
 				lastIsValid = true
 			}
-			// -号
-			if c == 45 {
+			if c == '-' {
 				negative = true
 				lastIsValid = true
 			}
 			continue
 		}
-		// 非数字跳出
-		if c < 48 || c > 57 {
+		if c < '0' || c > '9' {
 			break
 		}
 		c -= '0'

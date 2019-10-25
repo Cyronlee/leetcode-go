@@ -21,7 +21,7 @@ https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2
 输出: 49
 */
 func main() {
-	fmt.Print(maxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
+	fmt.Println(maxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
 }
 
 // 执行用时 8 ms 内存消耗 5.7 MB

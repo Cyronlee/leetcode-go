@@ -37,7 +37,7 @@ import (
 输出: true
 */
 func main() {
-	fmt.Print(isValid("()[]{}"))
+	fmt.Println(isValid("()[]{}"))
 }
 
 // 执行用时 0 ms 内存消耗 2 MB

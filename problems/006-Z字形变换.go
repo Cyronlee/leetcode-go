@@ -33,7 +33,7 @@ E C   I H   N
 T     S     G
 */
 func main() {
-	fmt.Print(convert("LEETCODEISHIRING", 4))
+	fmt.Println(convert("LEETCODEISHIRING", 4))
 }
 
 // 执行用时 4 ms 内存消耗 4.1 MB

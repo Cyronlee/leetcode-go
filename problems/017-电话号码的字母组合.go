@@ -18,7 +18,7 @@ https://assets.leetcode-cn.com/aliyun-lc-upload/original_images/17_telephone_key
 输出：["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 */
 func main() {
-	fmt.Print(letterCombinations("234"))
+	fmt.Println(letterCombinations("234"))
 }
 
 // 执行用时 0 ms 内存消耗 2.6 MB

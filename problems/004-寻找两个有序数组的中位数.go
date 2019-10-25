@@ -27,7 +27,7 @@ nums2 = [3, 4]
 func main() {
 	nums1 := []int{1, 2}
 	nums2 := []int{3, 4}
-	fmt.Print(findMedianSortedArrays(nums1, nums2))
+	fmt.Println(findMedianSortedArrays(nums1, nums2))
 }
 
 // 执行用时 20 ms 内存消耗 5.5 MB

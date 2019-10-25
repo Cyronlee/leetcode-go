@@ -21,7 +21,7 @@ import (
 ]
 */
 func main() {
-	fmt.Print(threeSum([]int{-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6}))
+	fmt.Println(threeSum([]int{-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6}))
 }
 
 // 执行用时 968 ms 内存消耗 205 MB

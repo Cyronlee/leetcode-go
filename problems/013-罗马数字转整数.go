@@ -50,7 +50,7 @@ C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
 解释: M = 1000, CM = 900, XC = 90, IV = 4.
 */
 func main() {
-	fmt.Print(romanToInt("LVIII"))
+	fmt.Println(romanToInt("LVIII"))
 }
 
 // 执行用时 4 ms 内存消耗 3.4 MB

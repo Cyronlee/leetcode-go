@@ -18,7 +18,7 @@ import "fmt"
 输出: "bb"
 */
 func main() {
-	fmt.Print(longestPalindrome("aaabaaaa"))
+	fmt.Println(longestPalindrome("aaabaaaa"))
 }
 
 // 执行用时 4 ms 内存消耗 2.2 MB

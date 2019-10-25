@@ -28,7 +28,7 @@ import (
 你能不将整数转为字符串来解决这个问题吗？
 */
 func main() {
-	fmt.Print(isPalindrome(12321))
+	fmt.Println(isPalindrome(12321))
 }
 
 // 执行用时 24 ms 内存消耗 5 MB

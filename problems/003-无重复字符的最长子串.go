@@ -25,8 +25,8 @@ import "fmt"
      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 */
 func main() {
-	fmt.Print(lengthOfLongestSubstring("abav"))
-	fmt.Print(lengthOfLongestSubstring2("abav"))
+	fmt.Println(lengthOfLongestSubstring("abav"))
+	fmt.Println(lengthOfLongestSubstring2("abav"))
 }
 
 // 执行用时 8 ms 内存消耗 2.7 MB

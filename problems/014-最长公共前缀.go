@@ -25,7 +25,7 @@ import (
 所有输入只包含小写字母 a-z 。
 */
 func main() {
-	fmt.Print(longestCommonPrefix([]string{"flower", "flow", "flight"}))
+	fmt.Println(longestCommonPrefix([]string{"flower", "flow", "flight"}))
 }
 
 // 执行用时 0 ms 内存消耗 2.4 MB

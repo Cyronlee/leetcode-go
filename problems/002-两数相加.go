@@ -20,7 +20,7 @@ func main() {
 	l2 := ListNode{5, &ListNode{6, &ListNode{4, nil,}}}
 	ln := addTwoNumbers(&l1, &l2)
 	for ln != nil {
-		fmt.Print(ln.Val)
+		fmt.Println(ln.Val)
 		ln = ln.Next
 	}
 }
@@ -61,7 +61,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	return ln
 }
 
-type ListNode struct {
+/*type ListNode struct {
 	Val  int
 	Next *ListNode
-}
+}*/

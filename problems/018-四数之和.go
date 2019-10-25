@@ -26,10 +26,10 @@ import (
 ]
 */
 func main() {
-	fmt.Print(fourSum([]int{-1, 4, -4, 3, -2, 3, 0}, -7))
+	fmt.Println(fourSum([]int{-1, 4, -4, 3, -2, 3, 0}, -7))
 }
 
-// 执行用时 996 ms 内存消耗 272 MB
+// 执行用时 12 ms 内存消耗 3.1 MB
 func fourSum(nums []int, target int) [][]int {
 	sort.Ints(nums)
 	//fmt.Println(nums)

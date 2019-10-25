@@ -9,12 +9,12 @@ import "fmt"
 func main() {
 	head := removeNthFromEnd(&ListNode{1, &ListNode{2, &ListNode{3, &ListNode{4, nil}}}}, 2)
 	for head != nil {
-		fmt.Print(head.Val)
+		fmt.Println(head.Val)
 		head = head.Next
 	}
 }
 
-// 执行用时  ms 内存消耗  MB
+// 执行用时 0 ms 内存消耗 2.2 MB
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	if head.Next == nil {
 		return nil

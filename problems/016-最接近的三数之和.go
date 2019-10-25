@@ -14,7 +14,7 @@ import (
 与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).
 */
 func main() {
-	fmt.Print(threeSumClosest([]int{1, 1, -1, -1, 3}, -1))
+	fmt.Println(threeSumClosest([]int{1, 1, -1, -1, 3}, -1))
 }
 
 // 执行用时 12 ms 内存消耗 2.7 MB

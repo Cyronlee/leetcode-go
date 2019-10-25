@@ -53,7 +53,7 @@ p = "mis*is*p*."
 输出: false
 */
 func main() {
-	fmt.Print(isMatch("aabb", "a*b*"))
+	fmt.Println(isMatch("aabb", "a*b*"))
 }
 
 // 执行用时 16 ms 内存消耗 2.2 MB
