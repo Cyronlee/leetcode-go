@@ -32,8 +32,8 @@ func main() {
 
 // 执行用时 328 ms 内存消耗 5.3 MB
 func mergeKLists(lists []*ListNode) *ListNode {
-	var head *ListNode
-	var tail *ListNode
+	head := &ListNode{0, nil}
+	tail := head
 	for {
 		k := -1
 		min := -999
@@ -48,15 +48,10 @@ func mergeKLists(lists []*ListNode) *ListNode {
 			}
 		}
 		if k == -1 {
-			return head
+			return head.Next
 		}
-		if tail == nil {
-			tail = lists[k]
-			head = tail
-		} else {
-			tail.Next = lists[k]
-			tail = tail.Next
-		}
+		tail.Next = lists[k]
+		tail = tail.Next
 		lists[k] = lists[k].Next
 	}
 }

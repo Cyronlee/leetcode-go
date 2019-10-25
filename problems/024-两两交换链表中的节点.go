@@ -27,30 +27,25 @@ func swapPairs(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
-	var ret *ListNode
-	var tail *ListNode
-	var temp *ListNode
+	ret := &ListNode{0, nil}
+	tail := ret
+	temp := ret
 	for head != nil {
 		if head.Next != nil {
 			temp = head.Next.Next
 		} else {
 			tail.Next = head
-			return ret
+			return ret.Next
 		}
-		if tail == nil {
-			tail = head.Next
-			ret = tail
-		} else {
-			tail.Next = head.Next
-			tail = tail.Next
-		}
+		tail.Next = head.Next
+		tail = tail.Next
 		tail.Next = head
 		tail = tail.Next
 		// 防止循环链表
 		tail.Next = nil
 		head = temp
 	}
-	return ret
+	return ret.Next
 }
 
 /*type ListNode struct {

@@ -43,19 +43,14 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 		head = head.Next
 	}
 	if k > len(nodes) {
-		return head
+		return nodes[0]
 	}
-	var ret *ListNode
-	var tail *ListNode
+	ret := &ListNode{0, nil}
+	tail := ret
 	for i := 0; i < len(nodes)/k; i++ {
 		for j := (i+1)*k - 1; j > i*k-1; j-- {
-			if tail == nil {
-				tail = nodes[j]
-				ret = tail
-			} else {
-				tail.Next = nodes[j]
-				tail = tail.Next
-			}
+			tail.Next = nodes[j]
+			tail = tail.Next
 			tail.Next = nil
 		}
 	}
@@ -63,7 +58,7 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 	if r != 0 {
 		tail.Next = nodes[len(nodes)-r]
 	}
-	return ret
+	return ret.Next
 }
 
 /*type ListNode struct {

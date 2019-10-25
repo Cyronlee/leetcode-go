@@ -23,17 +23,8 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l2 == nil {
 		return l1
 	}
-	var head *ListNode
-	var tail *ListNode
-	if l1.Val < l2.Val {
-		head = l1
-		tail = l1
-		l1 = l1.Next
-	} else {
-		head = l2
-		tail = l2
-		l2 = l2.Next
-	}
+	head := &ListNode{0, nil}
+	tail := head
 	for {
 		if l1 == nil && l2 == nil {
 			break
@@ -54,7 +45,7 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 		}
 		tail = tail.Next
 	}
-	return head
+	return head.Next
 }
 
 type ListNode struct {

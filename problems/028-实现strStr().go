@@ -28,7 +28,7 @@ func main() {
 	fmt.Println(strStr("abcabc", "abc"))
 }
 
-// 执行用时  ms 内存消耗  MB
+// 执行用时 0 ms 内存消耗 2.3 MB
 func strStr(haystack string, needle string) int {
 	if len(needle) == 0 {
 		return 0

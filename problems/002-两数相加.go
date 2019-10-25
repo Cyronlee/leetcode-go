@@ -25,40 +25,28 @@ func main() {
 	}
 }
 
+// 执行用时 4 ms 内存消耗 4.9 MB
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	var ln *ListNode
-	n1 := l1
-	n2 := l2
-	tail := ln
+	head := &ListNode{0, nil}
+	tail := head
 	carry := 0
-	for n1 != nil || n2 != nil || carry != 0 {
+	for l1 != nil || l2 != nil || carry != 0 {
 		v1 := 0
 		v2 := 0
-		if n1 != nil {
-			v1 = n1.Val
+		if l1 != nil {
+			v1 = l1.Val
+			l1 = l1.Next
 		}
-		if n2 != nil {
-			v2 = n2.Val
+		if l2 != nil {
+			v2 = l2.Val
+			l2 = l2.Next
 		}
 		sum := v1 + v2 + carry
 		carry = sum / 10
-
-		if ln == nil {
-			ln = &ListNode{sum % 10, nil,}
-			tail = ln
-		} else {
-			tail.Next = &ListNode{sum % 10, nil,}
-			tail = tail.Next
-		}
-
-		if n1 != nil {
-			n1 = n1.Next
-		}
-		if n2 != nil {
-			n2 = n2.Next
-		}
+		tail.Next = &ListNode{sum % 10, nil,}
+		tail = tail.Next
 	}
-	return ln
+	return head.Next
 }
 
 /*type ListNode struct {
