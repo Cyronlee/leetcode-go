@@ -5,7 +5,7 @@ import "fmt"
 /*
 000
 
- */
+*/
 func main() {
 	fmt.Println()
 }

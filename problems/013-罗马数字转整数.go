@@ -56,7 +56,7 @@ func main() {
 // 执行用时 4 ms 内存消耗 3.4 MB
 func romanToInt(s string) int {
 	numbers := []int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
-	romans := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+	romans := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
 	num := 0
 	for i := 0; i < 13; i++ {
 		for replaceFirst(&s, romans[i]) {

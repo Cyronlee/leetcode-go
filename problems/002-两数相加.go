@@ -16,8 +16,8 @@ import "fmt"
 原因：342 + 465 = 807
 */
 func main() {
-	l1 := ListNode{2, &ListNode{4, &ListNode{3, nil,}}}
-	l2 := ListNode{5, &ListNode{6, &ListNode{4, nil,}}}
+	l1 := ListNode{2, &ListNode{4, &ListNode{3, nil}}}
+	l2 := ListNode{5, &ListNode{6, &ListNode{4, nil}}}
 	ln := addTwoNumbers(&l1, &l2)
 	for ln != nil {
 		fmt.Println(ln.Val)
@@ -43,7 +43,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		}
 		sum := v1 + v2 + carry
 		carry = sum / 10
-		tail.Next = &ListNode{sum % 10, nil,}
+		tail.Next = &ListNode{sum % 10, nil}
 		tail = tail.Next
 	}
 	return head.Next
